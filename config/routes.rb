@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
- resources :companies
- #add nested resources here
+root 'companies#index'
+
+ resources :companies do
+ 	resources :messages
+ end
+ 	#add nested resources here
 
 end
